@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 import java.util.Collection;
 
 @Entity
-@Table(name = "menu", schema = "json_import", catalog = "")
+@Table(name = "menu", schema = "spring_adminlte")
 public class MenuEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

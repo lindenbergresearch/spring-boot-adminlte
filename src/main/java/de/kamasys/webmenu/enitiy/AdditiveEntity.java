@@ -3,7 +3,7 @@ package de.kamasys.webmenu.enitiy;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "additive", schema = "json_import", catalog = "")
+@Table(name = "additive", schema = "spring_adminlte")
 public class AdditiveEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

@@ -3,7 +3,7 @@ package de.kamasys.webmenu.enitiy;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "allergen", schema = "json_import", catalog = "")
+@Table(name = "allergen", schema = "spring_adminlte")
 public class AllergenEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

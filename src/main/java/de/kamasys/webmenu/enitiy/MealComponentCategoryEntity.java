@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
-@Table(name = "meal_component_category", schema = "json_import", catalog = "")
+@Table(name = "meal_component_category", schema = "spring_adminlte")
 public class MealComponentCategoryEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
