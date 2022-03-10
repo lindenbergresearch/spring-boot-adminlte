@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Spring Boot AdminLTE 2 | Login</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>WebMenu Administer | Login</title>
     <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
     <!-- Bootstrap 3.3.6 -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css"/>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css"/>
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"/>
     <!-- Theme style -->
-    <link rel="stylesheet" href="dist/css/AdminLTE.min.css"/>
+    <link rel="stylesheet" href="dist/css/AdminLTE.css"/>
     <!-- iCheck -->
     <link rel="stylesheet" href="plugins/iCheck/square/blue.css"/>
 
@@ -28,15 +27,15 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <b>SpringBoot</b>AdminLTE2
+        <b>WebMenu</b><i>Administer</i>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">Login sistem euyyy 3x.</p>
+        <p class="login-box-msg">Bitte melden Sie sich an:</p>
 
         <div th:if="${param.error}">
             <div class="callout callout-danger">
-                <p>Username or password invalid!</p>
+                <p>Benutzername oder Passwort ungültig.</p>
             </div>
         </div>
 
@@ -65,13 +64,13 @@
 <!-- iCheck -->
 <script src="plugins/iCheck/icheck.min.js"></script>
 <script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' // optional
+    $(function () {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
     });
-  });
 </script>
 </body>
 </html>
