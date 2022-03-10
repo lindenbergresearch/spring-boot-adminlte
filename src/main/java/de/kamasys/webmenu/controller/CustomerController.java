@@ -18,15 +18,18 @@ public class CustomerController {
 
     private CustomersService customerService;
 
+
     @Autowired
     public void setCustomerService(CustomersService customerService) {
         this.customerService = customerService;
     }
 
+
     @GetMapping
     public String index() {
         return "redirect:/customers/1";
     }
+
 
     @GetMapping(value = "/{pageNumber}")
     public String list(@PathVariable Integer pageNumber, Model model) {
@@ -42,24 +45,24 @@ public class CustomerController {
         model.addAttribute("currentIndex", current);
 
         return "customers/list";
-
     }
+
 
     @GetMapping("/add")
     public String add(Model model) {
 
         model.addAttribute("customer", new Customers());
         return "customers/form";
-
     }
+
 
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable Long id, Model model) {
 
         model.addAttribute("customer", customerService.get(id));
         return "customers/form";
-
     }
+
 
     @PostMapping(value = "/save")
     public String save(Customers customer, final RedirectAttributes ra) {
@@ -67,15 +70,13 @@ public class CustomerController {
         Customers save = customerService.save(customer);
         ra.addFlashAttribute("successFlash", "Cliente foi salvo com sucesso.");
         return "redirect:/customers";
-
     }
+
 
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable Long id) {
 
         customerService.delete(id);
         return "redirect:/customers";
-
     }
-
 }

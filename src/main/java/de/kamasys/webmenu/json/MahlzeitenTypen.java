@@ -1,9 +1,9 @@
 package de.kamasys.webmenu.json;
 
-import java.util.List;
-import javax.annotation.Generated;
-
 import com.google.gson.annotations.SerializedName;
+
+import javax.annotation.Generated;
+import java.util.List;
 
 @Generated("net.hexar.json2pojo")
 @SuppressWarnings("unused")
@@ -11,10 +11,13 @@ public class MahlzeitenTypen {
 
     @SerializedName("AlternativBezeichnung")
     private String mAlternativBezeichnung;
+
     @SerializedName("Bezeichnung")
     private String mBezeichnung;
+
     @SerializedName("Id")
     private String mId;
+
     @SerializedName("Kategorien")
     private List<String> mKategorien;
 
@@ -57,5 +60,4 @@ public class MahlzeitenTypen {
     public void setKategorien(List<String> kategorien) {
         mKategorien = kategorien;
     }
-
 }

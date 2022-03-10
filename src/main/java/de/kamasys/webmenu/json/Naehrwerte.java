@@ -1,8 +1,8 @@
 package de.kamasys.webmenu.json;
 
-import javax.annotation.Generated;
-
 import com.google.gson.annotations.SerializedName;
+
+import javax.annotation.Generated;
 
 @Generated("net.hexar.json2pojo")
 @SuppressWarnings("unused")
@@ -10,8 +10,10 @@ public class Naehrwerte {
 
     @SerializedName("Einheit")
     private String mEinheit;
+
     @SerializedName("Menge")
     private Double mMenge;
+
     @SerializedName("Name")
     private String mName;
 
@@ -44,5 +46,4 @@ public class Naehrwerte {
     public void setName(String name) {
         mName = name;
     }
-
 }

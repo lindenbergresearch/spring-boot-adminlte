@@ -11,31 +11,42 @@ public class MealEntity {
     @Id
     @Column(name = "id")
     private int id;
+
     @Basic
     @Column(name = "date")
     private Timestamp date;
+
     @Basic
     @Column(name = "name")
     private String name;
+
     @Column(name = "category_id", insertable = false, updatable = false)
     private Integer categoryId;
+
     @Column(name = "menu_id", insertable = false, updatable = false)
     private Integer menuId;
+
     @Column(name = "nutritional_values_id", insertable = false, updatable = false)
     private Integer nutritionalValuesId;
+
     @OneToMany(mappedBy = "mealByMealId")
     private Collection<AdditiveEntity> additivesById;
+
     @OneToMany(mappedBy = "mealByMealId")
     private Collection<AllergenEntity> allergensById;
+
     @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private MealCategoryEntity mealCategoryByCategoryId;
+
     @ManyToOne
     @JoinColumn(name = "menu_id", referencedColumnName = "id")
     private MenuEntity menuByMenuId;
+
     @ManyToOne
     @JoinColumn(name = "nutritional_values_id", referencedColumnName = "id")
     private NutritionalValuesEntity nutritionalValuesByNutritionalValuesId;
+
     @OneToMany(mappedBy = "mealByMealId")
     private Collection<MealComponentEntity> mealComponentsById;
 
@@ -112,9 +123,7 @@ public class MealEntity {
         if (name != null ? !name.equals(that.name) : that.name != null) return false;
         if (categoryId != null ? !categoryId.equals(that.categoryId) : that.categoryId != null) return false;
         if (menuId != null ? !menuId.equals(that.menuId) : that.menuId != null) return false;
-        if (nutritionalValuesId != null ? !nutritionalValuesId.equals(that.nutritionalValuesId) : that.nutritionalValuesId != null) return false;
-
-        return true;
+        return nutritionalValuesId != null ? nutritionalValuesId.equals(that.nutritionalValuesId) : that.nutritionalValuesId == null;
     }
 
 

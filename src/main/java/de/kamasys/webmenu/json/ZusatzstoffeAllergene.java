@@ -1,8 +1,8 @@
 package de.kamasys.webmenu.json;
 
-import javax.annotation.Generated;
-
 import com.google.gson.annotations.SerializedName;
+
+import javax.annotation.Generated;
 
 @Generated("net.hexar.json2pojo")
 @SuppressWarnings("unused")
@@ -10,10 +10,13 @@ public class ZusatzstoffeAllergene {
 
     @SerializedName("Bezeichnung")
     private String mBezeichnung;
+
     @SerializedName("Fussnote")
     private String mFussnote;
+
     @SerializedName("Id")
     private String mId;
+
     @SerializedName("IstAllergen")
     private Boolean mIstAllergen;
 
@@ -56,5 +59,4 @@ public class ZusatzstoffeAllergene {
     public void setIstAllergen(Boolean istAllergen) {
         mIstAllergen = istAllergen;
     }
-
 }

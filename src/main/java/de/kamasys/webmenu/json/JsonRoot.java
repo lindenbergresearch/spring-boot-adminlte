@@ -1,10 +1,10 @@
 package de.kamasys.webmenu.json;
 
 
-import java.util.List;
-import javax.annotation.Generated;
-
 import com.google.gson.annotations.SerializedName;
+
+import javax.annotation.Generated;
+import java.util.List;
 
 @Generated("net.hexar.json2pojo")
 @SuppressWarnings("unused")
@@ -12,12 +12,16 @@ public class JsonRoot {
 
     @SerializedName("KategorieKomponentenGruppenGruppierungen")
     private List<Object> mKategorieKomponentenGruppenGruppierungen;
+
     @SerializedName("KomponentenGruppenGruppierungen")
     private List<Object> mKomponentenGruppenGruppierungen;
+
     @SerializedName("Mahlzeiten")
     private List<de.kamasys.webmenu.json.MahlzeitenTypen> mMahlzeitenTypen;
+
     @SerializedName("NutzungsZeit")
     private Object mNutzungsZeit;
+
     @SerializedName("Tage")
     private List<de.kamasys.webmenu.json.Tage> mTage;
 
@@ -70,5 +74,4 @@ public class JsonRoot {
     public void setTage(List<de.kamasys.webmenu.json.Tage> tage) {
         mTage = tage;
     }
-
 }

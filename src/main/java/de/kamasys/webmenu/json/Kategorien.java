@@ -1,10 +1,10 @@
 package de.kamasys.webmenu.json;
 
 
-import java.util.List;
-import javax.annotation.Generated;
-
 import com.google.gson.annotations.SerializedName;
+
+import javax.annotation.Generated;
+import java.util.List;
 
 @Generated("net.hexar.json2pojo")
 @SuppressWarnings("unused")
@@ -12,38 +12,55 @@ public class Kategorien {
 
     @SerializedName("Behaeltermenge")
     private Double mBehaeltermenge;
+
     @SerializedName("Bezeichnung")
     private String mBezeichnung;
+
     @SerializedName("DauerbestellartikelBis")
     private Object mDauerbestellartikelBis;
+
     @SerializedName("DauerbestellartikelVon")
     private Object mDauerbestellartikelVon;
+
     @SerializedName("DauerbestellerJomealErlaubt")
     private Boolean mDauerbestellerJomealErlaubt;
+
     @SerializedName("GeaendertAm")
     private String mGeaendertAm;
+
     @SerializedName("Id")
     private String mId;
+
     @SerializedName("InhaltInfo")
     private InhaltInfo mInhaltInfo;
+
     @SerializedName("IstDauerbestellartikel")
     private Boolean mIstDauerbestellartikel;
+
     @SerializedName("KategorieId")
     private String mKategorieId;
+
     @SerializedName("KategorieMengeAufKgUebertragen")
     private Object mKategorieMengeAufKgUebertragen;
+
     @SerializedName("KategorieMengeIstPflichtFeld")
     private Object mKategorieMengeIstPflichtFeld;
+
     @SerializedName("KomponentenAuswahlErlauben")
     private Object mKomponentenAuswahlErlauben;
+
     @SerializedName("MaxKatMenge")
     private Object mMaxKatMenge;
+
     @SerializedName("MaxMenge")
     private Object mMaxMenge;
+
     @SerializedName("Menge")
     private Double mMenge;
+
     @SerializedName("PortionsGroesse")
     private Double mPortionsGroesse;
+
     @SerializedName("Speisen")
     private List<de.kamasys.webmenu.json.Speisen> mSpeisen;
 
@@ -226,5 +243,4 @@ public class Kategorien {
     public void setSpeisen(List<de.kamasys.webmenu.json.Speisen> speisen) {
         mSpeisen = speisen;
     }
-
 }

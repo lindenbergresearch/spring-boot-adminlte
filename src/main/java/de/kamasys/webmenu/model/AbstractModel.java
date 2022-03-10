@@ -15,13 +15,16 @@ public abstract class AbstractModel<Long extends Serializable> implements Serial
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
     public Long getId() {
         return this.id;
     }
 
+
     public void setId(Long id) {
         this.id = id;
     }
+
 
     @Override
     public int hashCode() {
@@ -30,6 +33,7 @@ public abstract class AbstractModel<Long extends Serializable> implements Serial
         result = prime * result + ((id == null) ? 0 : id.hashCode());
         return result;
     }
+
 
     @Override
     public boolean equals(Object obj) {
@@ -44,5 +48,4 @@ public abstract class AbstractModel<Long extends Serializable> implements Serial
             return other.id == null;
         } else return id.equals(other.id);
     }
-
 }

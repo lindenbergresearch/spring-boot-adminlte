@@ -109,9 +109,7 @@ public class MealComponentEntity {
         if (mealId != null ? !mealId.equals(that.mealId) : that.mealId != null) return false;
         if (mealComponentCategoryId != null ? !mealComponentCategoryId.equals(that.mealComponentCategoryId) : that.mealComponentCategoryId != null)
             return false;
-        if (nutritionalValuesId != null ? !nutritionalValuesId.equals(that.nutritionalValuesId) : that.nutritionalValuesId != null) return false;
-
-        return true;
+        return nutritionalValuesId != null ? nutritionalValuesId.equals(that.nutritionalValuesId) : that.nutritionalValuesId == null;
     }
 
 

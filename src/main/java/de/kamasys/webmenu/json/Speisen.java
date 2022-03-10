@@ -1,8 +1,8 @@
 package de.kamasys.webmenu.json;
 
-import javax.annotation.Generated;
-
 import com.google.gson.annotations.SerializedName;
+
+import javax.annotation.Generated;
 
 @Generated("net.hexar.json2pojo")
 @SuppressWarnings("unused")
@@ -10,50 +10,73 @@ public class Speisen {
 
     @SerializedName("Behaeltermenge")
     private Long mBehaeltermenge;
+
     @SerializedName("Bezeichnung")
     private String mBezeichnung;
+
     @SerializedName("DauerbestellartikelBis")
     private Object mDauerbestellartikelBis;
+
     @SerializedName("DauerbestellartikelVon")
     private Object mDauerbestellartikelVon;
+
     @SerializedName("DauerbestellerJomealErlaubt")
     private Boolean mDauerbestellerJomealErlaubt;
+
     @SerializedName("GeaendertAm")
     private String mGeaendertAm;
+
     @SerializedName("HatGrossKlein")
     private Boolean mHatGrossKlein;
+
     @SerializedName("Id")
     private String mId;
+
     @SerializedName("InhaltInfo")
     private InhaltInfo mInhaltInfo;
+
     @SerializedName("IstDauerbestellartikel")
     private Boolean mIstDauerbestellartikel;
+
     @SerializedName("KompMax")
     private Boolean mKompMax;
+
     @SerializedName("KomponentenGruppeId")
     private String mKomponentenGruppeId;
+
     @SerializedName("KomponentenGruppenBezeichnung")
     private String mKomponentenGruppenBezeichnung;
+
     @SerializedName("MaxMenge")
     private Object mMaxMenge;
+
     @SerializedName("MaxMengeKatKompGruppe")
     private Double mMaxMengeKatKompGruppe;
+
     @SerializedName("MaxMengeKompGruppe")
     private Double mMaxMengeKompGruppe;
+
     @SerializedName("Menge")
     private Double mMenge;
+
     @SerializedName("MengeGross")
     private Double mMengeGross;
+
     @SerializedName("MengeKlein")
     private Double mMengeKlein;
+
     @SerializedName("MengenwahlVerboten")
     private Boolean mMengenwahlVerboten;
+
     @SerializedName("MenueArtikelId")
     private String mMenueArtikelId;
+
     @SerializedName("PortionsGroesse")
     private Double mPortionsGroesse;
+
     @SerializedName("Sortierung")
     private Long mSortierung;
+
     @SerializedName("SpeiseMenge")
     private Double mSpeiseMenge;
 
@@ -296,5 +319,4 @@ public class Speisen {
     public void setSpeiseMenge(Double speiseMenge) {
         mSpeiseMenge = speiseMenge;
     }
-
 }

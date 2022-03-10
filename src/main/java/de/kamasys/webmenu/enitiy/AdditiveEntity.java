@@ -9,16 +9,21 @@ public class AdditiveEntity {
     @Id
     @Column(name = "id")
     private int id;
+
     @Basic
     @Column(name = "name")
     private String name;
+
     @Column(name = "meal_id", insertable = false, updatable = false)
     private Integer mealId;
+
     @Column(name = "meal_component_id", insertable = false, updatable = false)
     private Integer mealComponentId;
+
     @ManyToOne
     @JoinColumn(name = "meal_id", referencedColumnName = "id")
     private MealEntity mealByMealId;
+
     @ManyToOne
     @JoinColumn(name = "meal_component_id", referencedColumnName = "id")
     private MealComponentEntity mealComponentByMealComponentId;
@@ -74,9 +79,7 @@ public class AdditiveEntity {
         if (id != that.id) return false;
         if (name != null ? !name.equals(that.name) : that.name != null) return false;
         if (mealId != null ? !mealId.equals(that.mealId) : that.mealId != null) return false;
-        if (mealComponentId != null ? !mealComponentId.equals(that.mealComponentId) : that.mealComponentId != null) return false;
-
-        return true;
+        return mealComponentId != null ? mealComponentId.equals(that.mealComponentId) : that.mealComponentId == null;
     }
 
 

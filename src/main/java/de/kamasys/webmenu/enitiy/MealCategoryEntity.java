@@ -10,9 +10,11 @@ public class MealCategoryEntity {
     @Id
     @Column(name = "id")
     private int id;
+
     @Basic
     @Column(name = "name")
     private String name;
+
     @OneToMany(mappedBy = "mealCategoryByCategoryId")
     private Collection<MealEntity> mealsById;
 
@@ -45,9 +47,7 @@ public class MealCategoryEntity {
         MealCategoryEntity that = (MealCategoryEntity) o;
 
         if (id != that.id) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-
-        return true;
+        return name != null ? name.equals(that.name) : that.name == null;
     }
 
 

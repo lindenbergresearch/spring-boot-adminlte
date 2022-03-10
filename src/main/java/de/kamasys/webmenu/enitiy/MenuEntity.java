@@ -11,12 +11,15 @@ public class MenuEntity {
     @Id
     @Column(name = "id")
     private int id;
+
     @Basic
     @Column(name = "valid_from")
     private Timestamp validFrom;
+
     @Basic
     @Column(name = "valid_to")
     private Timestamp validTo;
+
     @OneToMany(mappedBy = "menuByMenuId")
     private Collection<MealEntity> mealsById;
 
@@ -60,9 +63,7 @@ public class MenuEntity {
 
         if (id != that.id) return false;
         if (validFrom != null ? !validFrom.equals(that.validFrom) : that.validFrom != null) return false;
-        if (validTo != null ? !validTo.equals(that.validTo) : that.validTo != null) return false;
-
-        return true;
+        return validTo != null ? validTo.equals(that.validTo) : that.validTo == null;
     }
 
 

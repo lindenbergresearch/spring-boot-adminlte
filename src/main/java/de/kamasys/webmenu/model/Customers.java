@@ -26,5 +26,4 @@ public class Customers extends AbstractModel<Long> {
 
     @Column(name = "added_date", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP", insertable = false, updatable = false)
     private Date addedDate;
-
 }

@@ -10,32 +10,42 @@ public class NutritionalValuesEntity {
     @Id
     @Column(name = "id")
     private int id;
+
     @Basic
     @Column(name = "kj")
     private Integer kj;
+
     @Basic
     @Column(name = "kcal")
     private Integer kcal;
+
     @Basic
     @Column(name = "carbohydrates")
     private Double carbohydrates;
+
     @Basic
     @Column(name = "fat")
     private Double fat;
+
     @Basic
     @Column(name = "fatty_acids")
     private Double fattyAcids;
+
     @Basic
     @Column(name = "protein")
     private Double protein;
+
     @Basic
     @Column(name = "sugar")
     private Double sugar;
+
     @Basic
     @Column(name = "salt")
     private Double salt;
+
     @OneToMany(mappedBy = "nutritionalValuesByNutritionalValuesId")
     private Collection<MealEntity> mealsById;
+
     @OneToMany(mappedBy = "nutritionalValuesByNutritionalValuesId")
     private Collection<MealComponentEntity> mealComponentsById;
 
@@ -145,9 +155,7 @@ public class NutritionalValuesEntity {
         if (fattyAcids != null ? !fattyAcids.equals(that.fattyAcids) : that.fattyAcids != null) return false;
         if (protein != null ? !protein.equals(that.protein) : that.protein != null) return false;
         if (sugar != null ? !sugar.equals(that.sugar) : that.sugar != null) return false;
-        if (salt != null ? !salt.equals(that.salt) : that.salt != null) return false;
-
-        return true;
+        return salt != null ? salt.equals(that.salt) : that.salt == null;
     }
 
 

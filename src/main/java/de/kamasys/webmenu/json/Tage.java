@@ -1,9 +1,9 @@
 package de.kamasys.webmenu.json;
 
-import java.util.List;
-import javax.annotation.Generated;
-
 import com.google.gson.annotations.SerializedName;
+
+import javax.annotation.Generated;
+import java.util.List;
 
 @Generated("net.hexar.json2pojo")
 @SuppressWarnings("unused")
@@ -11,6 +11,7 @@ public class Tage {
 
     @SerializedName("Mahlzeiten")
     private List<Mahlzeiten> mMahlzeiten;
+
     @SerializedName("Tag")
     private String mTag;
 
@@ -33,5 +34,4 @@ public class Tage {
     public void setTag(String tag) {
         mTag = tag;
     }
-
 }

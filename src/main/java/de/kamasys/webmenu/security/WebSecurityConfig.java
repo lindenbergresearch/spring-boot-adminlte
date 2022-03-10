@@ -25,23 +25,25 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private DataSource datasource;
 
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/bootstrap/**", "/dist/**", "/plugins/**").permitAll()
-                .anyRequest().authenticated()
-                .and()
+            .antMatchers("/bootstrap/**", "/dist/**", "/plugins/**").permitAll()
+            .anyRequest().authenticated()
+            .and()
             .formLogin()
-                .failureUrl("/login?error")
-                .loginPage("/login")
-                .defaultSuccessUrl("/")
-                .permitAll()
-                .and()
+            .failureUrl("/login?error")
+            .loginPage("/login")
+            .defaultSuccessUrl("/")
+            .permitAll()
+            .and()
             .logout()
-                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/login")
-                .permitAll();
+            .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+            .logoutSuccessUrl("/login")
+            .permitAll();
     }
+
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
@@ -66,5 +68,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             userDetailsService.createUser(userDetails);
         }
     }
-
 }
