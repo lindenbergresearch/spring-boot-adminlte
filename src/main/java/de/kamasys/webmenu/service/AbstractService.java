@@ -1,7 +1,7 @@
-package com.hendisantika.adminlte.service;
+package de.kamasys.webmenu.service;
 
 
-import com.hendisantika.adminlte.model.AbstractModel;
+import de.kamasys.webmenu.model.AbstractModel;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

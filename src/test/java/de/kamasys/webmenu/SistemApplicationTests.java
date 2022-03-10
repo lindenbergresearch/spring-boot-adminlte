@@ -1,4 +1,4 @@
-package com.hendisantika.adminlte;
+package de.kamasys.webmenu;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,4 +1,4 @@
-package com.hendisantika.adminlte.model;
+package de.kamasys.webmenu.model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

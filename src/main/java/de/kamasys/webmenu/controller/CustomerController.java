@@ -1,7 +1,7 @@
-package com.hendisantika.adminlte.controller;
+package de.kamasys.webmenu.controller;
 
-import com.hendisantika.adminlte.model.Customers;
-import com.hendisantika.adminlte.service.CustomersService;
+import de.kamasys.webmenu.model.Customers;
+import de.kamasys.webmenu.service.CustomersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;

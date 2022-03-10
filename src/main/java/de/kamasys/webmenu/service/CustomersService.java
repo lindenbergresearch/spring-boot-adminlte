@@ -1,7 +1,7 @@
-package com.hendisantika.adminlte.service;
+package de.kamasys.webmenu.service;
 
-import com.hendisantika.adminlte.model.Customers;
-import com.hendisantika.adminlte.repository.CustomersRepository;
+import de.kamasys.webmenu.model.Customers;
+import de.kamasys.webmenu.repository.CustomersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;

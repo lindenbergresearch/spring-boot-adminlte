@@ -1,6 +1,6 @@
-package com.hendisantika.adminlte.config;
+package de.kamasys.webmenu.config;
 
-import nz.net.ultraq.thymeleaf.LayoutDialect;
+import nz.net.ultraq.thymeleaf.layoutdialect.LayoutDialect;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

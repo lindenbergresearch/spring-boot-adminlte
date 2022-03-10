@@ -1,6 +1,6 @@
-package com.hendisantika.adminlte.repository;
+package de.kamasys.webmenu.repository;
 
-import com.hendisantika.adminlte.model.Customers;
+import de.kamasys.webmenu.model.Customers;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
