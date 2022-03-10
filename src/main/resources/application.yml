@@ -1,5 +1,6 @@
 spring:
   datasource:
+    # configured to work with MAMP
     url: jdbc:mysql://localhost:8889/spring_adminlte?allowPublicKeyRetrieval=true&useSSL=false&createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode    =false&serverTimezone=Asia/Jakarta&useSSL=false
     username: root
     password: root
