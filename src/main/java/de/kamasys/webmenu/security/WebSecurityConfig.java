@@ -48,23 +48,26 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         //Use Spring Boots User detailsMAnager
-        JdbcUserDetailsManager userDetailsService = new JdbcUserDetailsManager();
+        JdbcUserDetailsManager userDetailsService =
+            new JdbcUserDetailsManager();
 
         //Set our Datasource to use the one defined in application.properties
         userDetailsService.setDataSource(datasource);
 
         //Create BCryptPassword encoder
-        PasswordEncoder encoder = new BCryptPasswordEncoder();
+        PasswordEncoder encoder =
+            new BCryptPasswordEncoder();
 
         //add components
         auth.userDetailsService(userDetailsService).passwordEncoder(encoder);
         auth.jdbcAuthentication().dataSource(datasource);
 
         // add new user "user" with password "password" - password will be encrypted
-        if (!userDetailsService.userExists("naruto")) {
-            List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
+        if (!userDetailsService.userExists("admin")) {
+            List<GrantedAuthority> authorities = new ArrayList<>();
             authorities.add(new SimpleGrantedAuthority("USER"));
-            User userDetails = new User("naruto", encoder.encode("1234"), authorities);
+
+            User userDetails = new User("admin", encoder.encode("admin"), authorities);
             userDetailsService.createUser(userDetails);
         }
     }
