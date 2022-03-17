@@ -1,12 +1,14 @@
 package de.kamasys.webmenu.json;
 
 import com.google.gson.annotations.SerializedName;
+import lombok.ToString;
 
 import javax.annotation.Generated;
 import java.util.List;
 
 @Generated("net.hexar.json2pojo")
 @SuppressWarnings("unused")
+@ToString
 public class Mahlzeiten {
 
     @SerializedName("Bezeichnung")

@@ -2,12 +2,14 @@ package de.kamasys.webmenu.json;
 
 
 import com.google.gson.annotations.SerializedName;
+import lombok.ToString;
 
 import javax.annotation.Generated;
 import java.util.List;
 
 @Generated("net.hexar.json2pojo")
 @SuppressWarnings("unused")
+@ToString
 public class JsonRoot {
 
     @SerializedName("KategorieKomponentenGruppenGruppierungen")
@@ -17,13 +19,13 @@ public class JsonRoot {
     private List<Object> mKomponentenGruppenGruppierungen;
 
     @SerializedName("Mahlzeiten")
-    private List<de.kamasys.webmenu.json.MahlzeitenTypen> mMahlzeitenTypen;
+    private List<MahlzeitenTypen> mMahlzeitenTypen;
 
     @SerializedName("NutzungsZeit")
     private Object mNutzungsZeit;
 
     @SerializedName("Tage")
-    private List<de.kamasys.webmenu.json.Tage> mTage;
+    private List<Tage> mTage;
 
 
     public List<Object> getKategorieKomponentenGruppenGruppierungen() {
@@ -46,12 +48,12 @@ public class JsonRoot {
     }
 
 
-    public List<de.kamasys.webmenu.json.MahlzeitenTypen> getMahlzeitenTypen() {
+    public List<MahlzeitenTypen> getMahlzeitenTypen() {
         return mMahlzeitenTypen;
     }
 
 
-    public void setMahlzeitenTypen(List<de.kamasys.webmenu.json.MahlzeitenTypen> mahlzeitenTypen) {
+    public void setMahlzeitenTypen(List<MahlzeitenTypen> mahlzeitenTypen) {
         mMahlzeitenTypen = mahlzeitenTypen;
     }
 
@@ -66,12 +68,12 @@ public class JsonRoot {
     }
 
 
-    public List<de.kamasys.webmenu.json.Tage> getTage() {
+    public List<Tage> getTage() {
         return mTage;
     }
 
 
-    public void setTage(List<de.kamasys.webmenu.json.Tage> tage) {
+    public void setTage(List<Tage> tage) {
         mTage = tage;
     }
 }

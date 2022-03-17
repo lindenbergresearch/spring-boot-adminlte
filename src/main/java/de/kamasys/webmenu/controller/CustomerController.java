@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping("customers")
+@RequestMapping(value = "customers")
 public class CustomerController {
 
     private CustomersService customerService;
@@ -48,7 +48,7 @@ public class CustomerController {
     }
 
 
-    @GetMapping("/add")
+    @GetMapping(value = "/add")
     public String add(Model model) {
 
         model.addAttribute("customer", new Customers());
@@ -56,7 +56,7 @@ public class CustomerController {
     }
 
 
-    @GetMapping("/edit/{id}")
+    @GetMapping(value = "/edit/{id}")
     public String edit(@PathVariable Long id, Model model) {
 
         model.addAttribute("customer", customerService.get(id));
@@ -73,7 +73,7 @@ public class CustomerController {
     }
 
 
-    @GetMapping("/delete/{id}")
+    @GetMapping(value = "/delete/{id}")
     public String delete(@PathVariable Long id) {
 
         customerService.delete(id);

@@ -1,37 +1,40 @@
 package de.kamasys.webmenu.json;
 
 import com.google.gson.annotations.SerializedName;
+import lombok.ToString;
 
 import javax.annotation.Generated;
-import java.util.List;
+import java.util.*;
+
 
 @Generated("net.hexar.json2pojo")
 @SuppressWarnings("unused")
+@ToString
 public class InhaltInfo {
 
     @SerializedName("Naehrwerte")
-    private List<de.kamasys.webmenu.json.Naehrwerte> mNaehrwerte;
+    private List<Naehrwerte> mNaehrwerte = new ArrayList<>();
 
     @SerializedName("ZusatzstoffeAllergene")
-    private List<de.kamasys.webmenu.json.ZusatzstoffeAllergene> mZusatzstoffeAllergene;
+    private List<ZusatzstoffeAllergene> mZusatzstoffeAllergene = new ArrayList<>();
 
 
-    public List<de.kamasys.webmenu.json.Naehrwerte> getNaehrwerte() {
+    public List<Naehrwerte> getNaehrwerte() {
         return mNaehrwerte;
     }
 
 
-    public void setNaehrwerte(List<de.kamasys.webmenu.json.Naehrwerte> naehrwerte) {
+    public void setNaehrwerte(List<Naehrwerte> naehrwerte) {
         mNaehrwerte = naehrwerte;
     }
 
 
-    public List<de.kamasys.webmenu.json.ZusatzstoffeAllergene> getZusatzstoffeAllergene() {
+    public List<ZusatzstoffeAllergene> getZusatzstoffeAllergene() {
         return mZusatzstoffeAllergene;
     }
 
 
-    public void setZusatzstoffeAllergene(List<de.kamasys.webmenu.json.ZusatzstoffeAllergene> zusatzstoffeAllergene) {
+    public void setZusatzstoffeAllergene(List<ZusatzstoffeAllergene> zusatzstoffeAllergene) {
         mZusatzstoffeAllergene = zusatzstoffeAllergene;
     }
 }

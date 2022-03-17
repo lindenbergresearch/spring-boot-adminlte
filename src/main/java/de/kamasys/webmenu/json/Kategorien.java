@@ -2,12 +2,14 @@ package de.kamasys.webmenu.json;
 
 
 import com.google.gson.annotations.SerializedName;
+import lombok.ToString;
 
 import javax.annotation.Generated;
 import java.util.List;
 
 @Generated("net.hexar.json2pojo")
 @SuppressWarnings("unused")
+@ToString
 public class Kategorien {
 
     @SerializedName("Behaeltermenge")
@@ -62,7 +64,7 @@ public class Kategorien {
     private Double mPortionsGroesse;
 
     @SerializedName("Speisen")
-    private List<de.kamasys.webmenu.json.Speisen> mSpeisen;
+    private List<Speisen> mSpeisen;
 
 
     public Double getBehaeltermenge() {
@@ -235,12 +237,12 @@ public class Kategorien {
     }
 
 
-    public List<de.kamasys.webmenu.json.Speisen> getSpeisen() {
+    public List<Speisen> getSpeisen() {
         return mSpeisen;
     }
 
 
-    public void setSpeisen(List<de.kamasys.webmenu.json.Speisen> speisen) {
+    public void setSpeisen(List<Speisen> speisen) {
         mSpeisen = speisen;
     }
 }
