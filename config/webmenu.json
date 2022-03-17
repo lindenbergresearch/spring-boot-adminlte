@@ -1,0 +1,28 @@
+{
+  "Version": {
+    "Major": 0,
+    "Minor": 0,
+    "Patch": 1
+  },
+  "Mapping": {
+    "NutritionalMapping": [
+      {
+        "Field": "mName",
+        "Matches": "Energie (Kilojoule)",
+        "SourceFieldName": "mMenge",
+        "TargetFieldName": "kilojoule"
+      },
+      {
+        "Field": "mName",
+        "Matches": "Energie (Kilokalorien)",
+        "SourceFieldName": "mMenge",
+        "TargetFieldName": "kcal"
+      }
+    ]
+  },
+  "Options": {
+    "DefaultURL": "https://",
+    "DefaultUser": "User",
+    "UpdateStrategy": 0
+  }
+}

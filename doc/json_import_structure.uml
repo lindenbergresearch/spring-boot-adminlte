@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>de.kamasys.webmenu.json</OriginalElement>
+  <nodes>
+    <node x="1804.5" y="489.0">de.kamasys.webmenu.json.Speisen</node>
+    <node x="284.0" y="138.0">de.kamasys.webmenu.json.JsonRoot</node>
+    <node x="-15.0" y="149.0">de.kamasys.webmenu.json.MahlzeitenTypen</node>
+    <node x="1385.0" y="-5.0">de.kamasys.webmenu.json.Kategorien</node>
+    <node x="1044.0" y="709.0">de.kamasys.webmenu.json.ZusatzstoffeAllergene</node>
+    <node x="780.0" y="171.0">de.kamasys.webmenu.json.Tage</node>
+    <node x="1081.5" y="149.0">de.kamasys.webmenu.json.Mahlzeiten</node>
+    <node x="1349.0" y="731.0">de.kamasys.webmenu.json.InhaltInfo</node>
+    <node x="1467.5" y="900.0">de.kamasys.webmenu.json.Naehrwerte</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="de.kamasys.webmenu.json.Mahlzeiten" target="de.kamasys.webmenu.json.Kategorien" relationship="TO_MANY">
+      <point x="118.5" y="-5.0" />
+      <point x="0.0" y="-5.0" />
+    </edge>
+    <edge source="de.kamasys.webmenu.json.Kategorien" target="de.kamasys.webmenu.json.Speisen" relationship="TO_MANY">
+      <point x="155.0" y="-5.0" />
+      <point x="1965.0" y="215.0" />
+      <point x="5.0" y="-291.0" />
+    </edge>
+    <edge source="de.kamasys.webmenu.json.Tage" target="de.kamasys.webmenu.json.Mahlzeiten" relationship="TO_MANY">
+      <point x="120.0" y="-5.0" />
+      <point x="0.0" y="-5.0" />
+    </edge>
+    <edge source="de.kamasys.webmenu.json.JsonRoot" target="de.kamasys.webmenu.json.MahlzeitenTypen" relationship="TO_MANY">
+      <point x="0.0" y="5.0" />
+      <point x="115.0" y="5.0" />
+    </edge>
+    <edge source="de.kamasys.webmenu.json.JsonRoot" target="de.kamasys.webmenu.json.Tage" relationship="TO_MANY">
+      <point x="216.0" y="5.0" />
+      <point x="-120.0" y="5.0" />
+    </edge>
+    <edge source="de.kamasys.webmenu.json.Kategorien" target="de.kamasys.webmenu.json.InhaltInfo" relationship="DEPENDENCY">
+      <point x="-5.0" y="225.0" />
+      <point x="-5.0" y="-49.0" />
+    </edge>
+    <edge source="de.kamasys.webmenu.json.Kategorien" target="de.kamasys.webmenu.json.Speisen" relationship="DEPENDENCY">
+      <point x="155.0" y="5.0" />
+      <point x="1955.0" y="225.0" />
+      <point x="-5.0" y="-291.0" />
+    </edge>
+    <edge source="de.kamasys.webmenu.json.Tage" target="de.kamasys.webmenu.json.Mahlzeiten" relationship="DEPENDENCY">
+      <point x="120.0" y="5.0" />
+      <point x="-118.5" y="5.0" />
+    </edge>
+    <edge source="de.kamasys.webmenu.json.JsonRoot" target="de.kamasys.webmenu.json.MahlzeitenTypen" relationship="DEPENDENCY">
+      <point x="-216.0" y="-5.0" />
+      <point x="115.0" y="-5.0" />
+    </edge>
+    <edge source="de.kamasys.webmenu.json.Kategorien" target="de.kamasys.webmenu.json.InhaltInfo" relationship="TO_ONE">
+      <point x="5.0" y="-0.0" />
+      <point x="5.0" y="-49.0" />
+    </edge>
+    <edge source="de.kamasys.webmenu.json.InhaltInfo" target="de.kamasys.webmenu.json.ZusatzstoffeAllergene" relationship="TO_MANY">
+      <point x="0.0" y="5.0" />
+      <point x="116.0" y="5.0" />
+    </edge>
+    <edge source="de.kamasys.webmenu.json.Speisen" target="de.kamasys.webmenu.json.InhaltInfo" relationship="TO_ONE">
+      <point x="0.0" y="5.0" />
+      <point x="191.0" y="5.0" />
+    </edge>
+    <edge source="de.kamasys.webmenu.json.JsonRoot" target="de.kamasys.webmenu.json.Tage" relationship="DEPENDENCY">
+      <point x="216.0" y="-5.0" />
+      <point x="0.0" y="-5.0" />
+    </edge>
+    <edge source="de.kamasys.webmenu.json.InhaltInfo" target="de.kamasys.webmenu.json.Naehrwerte" relationship="DEPENDENCY">
+      <point x="-5.0" y="49.0" />
+      <point x="-5.0" y="-60.0" />
+    </edge>
+    <edge source="de.kamasys.webmenu.json.Speisen" target="de.kamasys.webmenu.json.InhaltInfo" relationship="DEPENDENCY">
+      <point x="-155.5" y="-5.0" />
+      <point x="191.0" y="-5.0" />
+    </edge>
+    <edge source="de.kamasys.webmenu.json.Mahlzeiten" target="de.kamasys.webmenu.json.Kategorien" relationship="DEPENDENCY">
+      <point x="118.5" y="5.0" />
+      <point x="-155.0" y="5.0" />
+    </edge>
+    <edge source="de.kamasys.webmenu.json.InhaltInfo" target="de.kamasys.webmenu.json.ZusatzstoffeAllergene" relationship="DEPENDENCY">
+      <point x="-191.0" y="-5.0" />
+      <point x="116.0" y="-5.0" />
+    </edge>
+    <edge source="de.kamasys.webmenu.json.InhaltInfo" target="de.kamasys.webmenu.json.Naehrwerte" relationship="TO_MANY">
+      <point x="5.0" y="-0.0" />
+      <point x="5.0" y="-60.0" />
+    </edge>
+  </edges>
+  <settings layout="Orthogonal Groups" zoom="0.8693630869363087" showDependencies="true" x="1050.5" y="533.0000000000001" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
